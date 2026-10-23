@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Customize your sleeve - Elitesleeve</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&family=Teko:wght@600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0B0C0E;color:#F2F2F0;font-family:'Public Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:#FFFFFF}
+a:hover{color:#D9D9D6}
+p,h1,h2,h3{margin:0}
+input,textarea{font:inherit}
+input::placeholder,textarea::placeholder{color:#6B6E73}
+</style>
+<script src="./es-motion.js"></script>
+</helmet>
+
+<div style="min-height:100vh;">
+
+<header style="position:sticky;top:0;z-index:50;border-bottom:1px solid #26292E;background:#0B0C0E;">
+  <div style="max-width:1320px;margin:0 auto;padding:16px 20px;display:grid;grid-template-columns:{{ hdrCols }};align-items:center;gap:12px 24px;">
+    <a href="index.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:26px;letter-spacing:0.04em;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Elite<span style="color:#C6F432;">sleeve</span></a>
+    <nav style="grid-column:{{ navCol }};grid-row:{{ navRow }};display:{{ navDisplay }};flex-wrap:wrap;align-items:center;justify-content:{{ navJustify }};gap:8px 36px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">
+      <a href="index.html#o-nama" style="color:#B4B7BB;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:0% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">O nama</a>
+      <a href="customize.html" style="color:#FFFFFF;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:100% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">Customize your sleeve</a>
+      <a href="index.html#recenzije" style="color:#B4B7BB;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:0% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">Recenzije</a>
+      <a href="index.html#kontakt" style="color:#B4B7BB;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:0% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">Kontakt</a>
+      <a href="index.html#faq" style="color:#B4B7BB;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:0% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">FAQ</a>
+    </nav>
+    <div style="display:flex;align-items:center;justify-content:flex-end;gap:2px;">
+      <a href="{{ instagramUrl }}" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="position:relative;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg></a>
+      <a href="{{ tiktokUrl }}" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="position:relative;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.7"></path></svg></a>
+      <a href="korpa.html" aria-label="Korpa" title="Korpa" style="position:relative;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2L5 8z"></path><path d="M9 8V6.5a3 3 0 0 1 6 0V8"></path></svg>
+        <sc-if value="{{ hasCart }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute;top:2px;right:0;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:#C6F432;color:#0B0C0E;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;">{{ cartCount }}</span>
+        </sc-if>
+      </a>
+      <button onClick="{{ toggleMenu }}" aria-label="Meni" aria-expanded="{{ menuOpenStr }}" style="display:{{ burgerDisplay }};width:44px;height:44px;margin-left:6px;align-items:center;justify-content:center;flex-direction:column;gap:5px;background:transparent;border:1px solid #33363C;border-radius:6px;cursor:pointer;padding:0;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#FFFFFF;">
+        <span style="display:block;width:18px;height:2px;background:#F2F2F0;transition:transform .35s cubic-bezier(.2,.8,.2,1);transform:{{ bTop }};"></span>
+        <span style="display:block;width:18px;height:2px;background:#F2F2F0;transition:opacity .2s ease;opacity:{{ bMid }};"></span>
+        <span style="display:block;width:18px;height:2px;background:#F2F2F0;transition:transform .35s cubic-bezier(.2,.8,.2,1);transform:{{ bBot }};"></span>
+      </button>
+    </div>
+  </div>
+  <div style="display:{{ mobileDisplay }};position:absolute;left:0;right:0;top:100%;grid-template-rows:{{ menuRows }};transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1);background:#0B0C0E;border-bottom:1px solid {{ menuBorder }};pointer-events:{{ menuPE }};">
+    <div style="overflow:hidden;min-height:0;">
+      <nav style="display:flex;flex-direction:column;padding:4px 20px 28px;opacity:{{ menuOpacity }};transform:translateY({{ menuY }});transition:opacity .3s ease, transform .45s cubic-bezier(.2,.8,.2,1);">
+        <a href="index.html#o-nama" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">O nama<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="customize.html" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Customize your sleeve<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="index.html#recenzije" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Recenzije<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="index.html#kontakt" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Kontakt<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="index.html#faq" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">FAQ<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section data-screen-label="Custom naslov" style="padding:clamp(56px,7vw,96px) 20px clamp(32px,4vw,48px);">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:20px;">
+    <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;">Customize your sleeve</div>
+    <h1 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(48px,6.4vw,88px);line-height:0.92;max-width:16ch;text-wrap:balance;">Tvoje ime, tvoj broj, grb tvog kluba</h1>
+    <p style="font-size:18px;line-height:1.6;max-width:56ch;color:#B4B7BB;">Upiši tekst, dodaj logo i odmah vidiš kako rukav izgleda. Cena je ista, 20 €.</p>
+  </div>
+</section>
+
+<section data-screen-label="Konfigurator" style="padding:0 20px clamp(80px,10vw,136px);">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(32px,5vw,72px);align-items:start;">
+
+    <div style="position:sticky;top:96px;background:{{ stageBg }};transition:background-color .4s ease;border:1px solid #26292E;border-radius:8px;padding:32px 20px 24px;display:flex;flex-direction:column;align-items:center;gap:20px;">
+      <svg viewBox="250 40 500 1420" style="width:100%;max-width:300px;height:auto;display:block;">
+        <image href="img/sleeve-base.jpg" x="0" y="0" width="1000" height="1506" style="filter:{{ sleeveFilter }};transition:filter .4s ease;"></image>
+        <sc-if value="{{ hasLogo }}" hint-placeholder-val="{{ false }}">
+          <image href="{{ logoUrl }}" x="{{ logoX }}" y="{{ logoY }}" width="{{ logoPx }}" height="{{ logoPx }}" preserveAspectRatio="xMidYMid meet"></image>
+        </sc-if>
+        {{ sleeveText }}
+      </svg>
+      <div style="display:flex;justify-content:space-between;width:100%;border-top:1px solid #26292E;padding-top:16px;font-size:14px;color:#8E9297;gap:12px;">
+        <span>Pregled uživo</span>
+        <span style="color:#F2F2F0;font-weight:600;">20 €</span>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:48px;">
+
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:32px;line-height:1;display:flex;gap:14px;align-items:baseline;"><span style="color:#C6F432;">01</span>Boja rukava</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+          <sc-for list="{{ sleeveOptions }}" as="o" hint-placeholder-count="3">
+            <button onClick="{{ o.onClick }}" style="display:flex;align-items:center;gap:10px;background:transparent;color:#F2F2F0;border:1px solid {{ o.border }};border-radius:6px;padding:10px 16px 10px 10px;cursor:pointer;font:inherit;font-size:15px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="background:#1A1C1F;border-color:#C6F432;color:#FFFFFF;">
+              <span style="width:24px;height:24px;border-radius:4px;background:{{ o.swatch }};border:1px solid #33363C;"></span>{{ o.label }}
+            </button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:32px;line-height:1;display:flex;gap:14px;align-items:baseline;"><span style="color:#C6F432;">02</span>Tekst</h2>
+        <label style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#B4B7BB;">
+          <span style="display:flex;justify-content:space-between;"><span>Ime, nadimak ili broj</span><span>{{ textCount }}/25</span></span>
+          <input value="{{ text }}" onChange="{{ onText }}" maxlength="25" placeholder="npr. MARKO 23" style="background:#141518;border:1px solid #33363C;border-radius:6px;padding:14px 16px;color:#F2F2F0;font-size:17px;outline:none;" style-focus="border-color:#C6F432;">
+        </label>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#B4B7BB;">
+          <span>Font</span>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <sc-for list="{{ fontOptions }}" as="o" hint-placeholder-count="3">
+              <button onClick="{{ o.onClick }}" style="background:transparent;color:#F2F2F0;border:1px solid {{ o.border }};border-radius:6px;padding:10px 18px;cursor:pointer;font-family:{{ o.family }};font-size:20px;font-weight:700;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="background:#1A1C1F;border-color:#C6F432;color:#FFFFFF;">{{ o.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px;">
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#B4B7BB;">
+            <span>Boja teksta</span>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;">
+              <sc-for list="{{ textColorOptions }}" as="o" hint-placeholder-count="3">
+                <button onClick="{{ o.onClick }}" aria-label="{{ o.label }}" title="{{ o.label }}" style="width:44px;height:44px;border-radius:6px;background:transparent;border:1px solid {{ o.border }};padding:6px;cursor:pointer;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#FFFFFF;">
+                  <span style="display:block;width:100%;height:100%;border-radius:3px;background:{{ o.swatch }};border:1px solid #33363C;"></span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#B4B7BB;">
+            <span>Smer teksta</span>
+            <div style="display:flex;gap:10px;">
+              <sc-for list="{{ orientOptions }}" as="o" hint-placeholder-count="2">
+                <button onClick="{{ o.onClick }}" style="height:44px;background:transparent;color:#F2F2F0;border:1px solid {{ o.border }};border-radius:6px;padding:0 16px;cursor:pointer;font:inherit;font-size:15px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="background:#1A1C1F;border-color:#C6F432;color:#FFFFFF;">{{ o.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:32px;line-height:1;display:flex;gap:14px;align-items:baseline;"><span style="color:#C6F432;">03</span>Logo ili grb</h2>
+        <label style="display:flex;align-items:center;justify-content:center;gap:12px;border:1px dashed #44474D;border-radius:8px;padding:28px 20px;cursor:pointer;color:#B4B7BB;font-size:15px;text-align:center;" style-hover="border-color:#FFFFFF;color:#FFFFFF;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 14V3M5.5 7.5L10 3l4.5 4.5M3 13v4h14v-4" stroke="currentColor" stroke-width="1.6"></path></svg>
+          <span>{{ logoLabel }}</span>
+          <input type="file" accept="image/*" onChange="{{ onLogo }}" style="display:none;">
+        </label>
+        <sc-if value="{{ hasLogo }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;">
+            <label style="flex:1 1 220px;display:flex;flex-direction:column;gap:8px;font-size:14px;color:#B4B7BB;">
+              <span>Veličina logoa</span>
+              <input type="range" min="50" max="130" value="{{ logoSize }}" onChange="{{ onLogoSize }}" style="accent-color:#C6F432;width:100%;">
+            </label>
+            <button onClick="{{ removeLogo }}" style="background:transparent;color:#B4B7BB;border:1px solid #33363C;border-radius:6px;padding:10px 16px;cursor:pointer;font:inherit;font-size:14px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="background:#1A1C1F;border-color:#C6F432;color:#FFFFFF;">Ukloni logo</button>
+          </div>
+        </sc-if>
+        <p style="font-size:14px;line-height:1.6;color:#8E9297;max-width:56ch;">Najbolje izgleda PNG sa providnom pozadinom.</p>
+      </div>
+
+      <sc-if value="{{ notAdded }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:16px;border-top:1px solid #26292E;padding-top:40px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;">
+            <span style="font-size:15px;color:#B4B7BB;">Tvoj custom Elitesleeve rukav</span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:44px;line-height:1;">20 €</span>
+          </div>
+          <sc-if value="{{ hasError }}" hint-placeholder-val="{{ false }}">
+            <p style="font-size:15px;color:#F2F2F0;border:1px solid #F2F2F0;border-radius:6px;padding:12px 16px;">{{ error }}</p>
+          </sc-if>
+          <button onClick="{{ addToCart }}" style="background-color:#F2F2F0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 50%;background-size:0% 100%;color:#0B0C0E;border:none;border-radius:6px;padding:20px 30px;font:inherit;font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:0.08em;cursor:pointer;transition:background-size .5s cubic-bezier(.65,0,.35,1), color .3s ease;" style-hover="background-size:100% 100%;color:#0B0C0E;">Dodaj u korpu</button>
+          <p style="font-size:14px;line-height:1.6;color:#8E9297;">Podatke za dostavu upisuješ u korpi. Pre izrade ti se javljamo da potvrdimo dizajn.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ added }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:20px;border:1px solid #F2F2F0;border-radius:8px;padding:clamp(24px,4vw,40px);">
+          <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;">Dodato u korpu</div>
+          <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(32px,4vw,44px);line-height:1;">Rukav „{{ text }}“ te čeka u korpi</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;">
+            <a href="korpa.html" style="background-color:#F2F2F0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 50%;background-size:0% 100%;color:#0B0C0E;text-decoration:none;border-radius:6px;padding:14px 22px;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:0.06em;transition:background-size .5s cubic-bezier(.65,0,.35,1), color .3s ease;" style-hover="background-size:100% 100%;color:#0B0C0E;">Idi u korpu</a>
+            <button onClick="{{ makeAnother }}" style="background:transparent;color:#F2F2F0;border:1px solid #33363C;border-radius:6px;padding:14px 20px;cursor:pointer;font:inherit;font-size:15px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="background:#1A1C1F;border-color:#C6F432;color:#FFFFFF;">Napravi još jedan</button>
+          </div>
+        </div>
+      </sc-if>
+
+    </div>
+  </div>
+</section>
+
+<footer style="border-top:1px solid #26292E;background:#0B0C0E;padding:64px 20px 28px;">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:48px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:40px 32px;">
+      <div style="display:flex;flex-direction:column;gap:18px;grid-column:{{ footBrandCol }};min-width:0;">
+        <a href="index.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:30px;letter-spacing:0.04em;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Elite<span style="color:#C6F432;">sleeve</span></a>
+        <p style="font-size:15px;line-height:1.6;color:#8E9297;max-width:34ch;">Rukavi za gejmere i sportiste. Gotovi modeli ili custom, sa tvojim imenom i grbom.</p>
+        <div style="display:flex;gap:4px;margin-left:-8px;">
+          <a href="{{ instagramUrl }}" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg></a>
+          <a href="{{ tiktokUrl }}" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.7"></path></svg></a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6B6E73;">Shop</span>
+        <a href="customize.html" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">Customize your sleeve</a>
+        <a href="korpa.html" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">Korpa</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6B6E73;">Elitesleeve</span>
+        <a href="index.html#o-nama" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">O nama</a>
+        <a href="index.html#recenzije" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">Recenzije</a>
+        <a href="index.html#faq" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">FAQ</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6B6E73;">Kontakt</span>
+        <span style="font-size:15px;line-height:1.6;color:#B4B7BB;">Pitanja i porudžbine primamo u porukama na Instagramu.</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid #26292E;padding-top:24px;font-size:13px;color:#6B6E73;">
+      <span>© 2026 Elitesleeve</span>
+      <span>Sva prava zadržana</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;instagramUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://instagram.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Mreže&quot;},&quot;tiktokUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://tiktok.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Mreže&quot;}}">
+const ESCart = {
+  key: "elitesleeve-cart",
+  get() { try { return JSON.parse(localStorage.getItem(this.key)) || []; } catch (e) { return []; } },
+  save(items) { try { localStorage.setItem(this.key, JSON.stringify(items)); } catch (e) {} window.dispatchEvent(new Event("escart")); },
+  add(item) { const items = this.get(); const same = item.type === "model" && items.find((x) => x.type === "model" && x.id === item.id); if (same) same.qty += 1; else items.push({ ...item, uid: Date.now() + "-" + Math.random().toString(36).slice(2, 7), qty: 1 }); this.save(items); },
+  count() { return this.get().reduce((n, x) => n + x.qty, 0); }
+};
+class Component extends DCLogic {
+  componentDidMount() {
+    const esGo = () => { if (window.ESMotion) window.ESMotion.init({ intro: false }); else setTimeout(esGo, 50); }; setTimeout(esGo, 30);
+    this.onResize = () => this.setState({ hdrNarrow: window.innerWidth < 1000 }); this.onResize(); window.addEventListener("resize", this.onResize);
+    this.onCart = () => this.setState({ cartCount: ESCart.count() }); this.onCart();
+    window.addEventListener("escart", this.onCart); window.addEventListener("storage", this.onCart);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); window.removeEventListener("escart", this.onCart); window.removeEventListener("storage", this.onCart); }
+  state = {
+    text: "ELITE 23", font: "barlow", sleeve: "black", textColor: "white", orient: "v",
+    logo: null, logoSize: 90, submitted: false, error: "",
+    f: { name: "", phone: "", email: "", address: "", city: "", zip: "", note: "" }
+  };
+  renderVals() {
+    const s = this.state;
+    const SLEEVES = { black: ["Crna", "#141517"], white: ["Bela", "#EDEDEA"], gray: ["Siva", "#4A4D52"] };
+    const COLORS = { white: ["Bela", "#F7F7F5"], black: ["Crna", "#0B0C0E"], gray: ["Siva", "#9A9DA2"] };
+    const FONTS = { barlow: ["Sport", "'Barlow Condensed', sans-serif", 0.5], teko: ["Tim", "'Teko', sans-serif", 0.48], plex: ["Čist", "'Public Sans', sans-serif", 0.66] };
+    const sel = (k) => (k ? "#FFFFFF" : "#33363C");
+    const text = s.text.toUpperCase();
+    const len = Math.max(text.length, 3);
+    const k = FONTS[s.font][2];
+    const vertical = s.orient === "v";
+    const fontSize = vertical ? 42 : 26;
+    const logoPx = Math.round(s.logoSize * 1.7);
+    const logoSize = s.logoSize;
+    const hn = s.hdrNarrow;
+    return {
+      hdrCols: hn ? "1fr auto" : "1fr auto 1fr", navDisplay: hn ? "none" : "flex", burgerDisplay: hn ? "flex" : "none", mobileDisplay: hn ? "grid" : "none",
+      menuRows: s.menuOpen ? "1fr" : "0fr", menuOpacity: s.menuOpen ? 1 : 0, menuY: s.menuOpen ? "0" : "-16px", menuBorder: s.menuOpen ? "#26292E" : "transparent", menuPE: s.menuOpen ? "auto" : "none", menuOpenStr: s.menuOpen ? "true" : "false",
+      bTop: s.menuOpen ? "translateY(7px) rotate(45deg)" : "none", bMid: s.menuOpen ? 0 : 1, bBot: s.menuOpen ? "translateY(-7px) rotate(-45deg)" : "none",
+      toggleMenu: () => this.setState((p) => ({ menuOpen: !p.menuOpen })), closeMenu: () => this.setState({ menuOpen: false }),
+      footBrandCol: hn ? "1 / -1" : "span 2",
+      cartCount: s.cartCount || 0, hasCart: (s.cartCount || 0) > 0,
+      tiktokUrl: this.props.tiktokUrl || "https://tiktok.com/",
+      notAdded: !s.added, added: !!s.added,
+      addToCart: () => {
+        if (!s.text.trim() && !s.logo) return this.setState({ error: "Dodaj tekst ili logo na rukav." });
+        ESCart.add({ type: "custom", name: "Custom rukav", price: 20, design: { text: s.text.toUpperCase(), font: s.font, sleeve: s.sleeve, textColor: s.textColor, orient: s.orient, logo: s.logo, logoSize: s.logoSize } });
+        this.setState({ added: true, error: "" });
+      },
+      makeAnother: () => this.setState({ added: false, text: "", logo: null }), navCol: hn ? "1 / -1" : "2", navRow: hn ? "2" : "1", navJustify: hn ? "flex-start" : "center",
+      sleeveText: vertical
+        ? React.createElement("g", null,
+            React.createElement("defs", null, React.createElement("path", { id: "esCurve", d: "M538,1190 C548,1020 566,840 572,710 C577,610 592,520 612,420" })),
+            React.createElement("text", { textAnchor: "middle", dominantBaseline: "central", fill: COLORS[s.textColor][1], fontFamily: FONTS[s.font][1], fontSize: Math.round(fontSize), fontWeight: 700, letterSpacing: 1 },
+              React.createElement("textPath", { href: "#esCurve", startOffset: "50%" }, text)))
+        : React.createElement("text", { x: 0, y: 0, transform: "translate(545 720) rotate(-4)", textAnchor: "middle", dominantBaseline: "central", fill: COLORS[s.textColor][1], fontFamily: FONTS[s.font][1], fontSize: Math.round(fontSize), fontWeight: 700, letterSpacing: 1 }, text),
+      instagramUrl: this.props.instagramUrl || "https://instagram.com/",
+      text, textCount: s.text.length, f: s.f,
+      sleeveFill: SLEEVES[s.sleeve][1],
+      sleeveStroke: s.sleeve === "black" ? "#3A3D43" : "#00000022",
+      seamStroke: s.sleeve === "white" ? "#00000030" : "#FFFFFF30",
+      textFill: COLORS[s.textColor][1],
+      fontFamily: FONTS[s.font][1],
+      fontSize: Math.round(fontSize),
+      textTransform: vertical ? "translate(150 385) rotate(-90)" : "translate(150 360)",
+      hasLogo: !!s.logo, logoUrl: s.logo || "", logoSize,
+      logoPx, logoX: 500 - logoPx / 2, logoY: 150,
+      sleeveFilter: { black: "none", gray: "brightness(2.3)", white: "invert(1)" }[s.sleeve], stageBg: { black: "#141518", gray: "#2E3037", white: "#EBEAE7" }[s.sleeve],
+      logoLabel: s.logo ? "Zameni logo" : "Dodaj logo ili grb kluba",
+      sleeveOptions: Object.entries(SLEEVES).map(([id, [label, swatch]]) => ({ label, swatch, border: sel(s.sleeve === id), onClick: () => this.setState({ sleeve: id }) })),
+      textColorOptions: Object.entries(COLORS).map(([id, [label, swatch]]) => ({ label, swatch, border: sel(s.textColor === id), onClick: () => this.setState({ textColor: id }) })),
+      fontOptions: Object.entries(FONTS).map(([id, [label, family]]) => ({ label, family, border: sel(s.font === id), onClick: () => this.setState({ font: id }) })),
+      orientOptions: [["v", "Uspravno"], ["h", "Vodoravno"]].map(([id, label]) => ({ label, border: sel(s.orient === id), onClick: () => this.setState({ orient: id }) })),
+      onText: (e) => this.setState({ text: e.target.value.slice(0, 25) }),
+      onLogo: (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        const r = new FileReader();
+        r.onload = () => this.setState({ logo: r.result });
+        r.readAsDataURL(file);
+        e.target.value = "";
+      },
+      onLogoSize: (e) => this.setState({ logoSize: Number(e.target.value) }),
+      removeLogo: () => this.setState({ logo: null }),
+      onField: (e) => { const { name, value } = e.target; this.setState((p) => ({ f: { ...p.f, [name]: value }, error: "" })); },
+      hasError: !!s.error, error: s.error,
+      notSubmitted: !s.submitted, submitted: s.submitted,
+      firstName: (s.f.name.trim().split(" ")[0]) || "",
+      onSubmit: (e) => {
+        e.preventDefault();
+        const f = s.f;
+        const missing = [["name", "ime i prezime"], ["phone", "telefon"], ["address", "ulicu i broj"], ["city", "grad"], ["zip", "poštanski broj"]].filter(([k]) => !f[k].trim()).map(([, l]) => l);
+        if (!s.text.trim() && !s.logo) return this.setState({ error: "Dodaj tekst ili logo na rukav." });
+        if (missing.length) return this.setState({ error: "Fali još: " + missing.join(", ") + "." });
+        this.setState({ submitted: true, error: "" });
+      },
+      reset: () => this.setState({ submitted: false, text: "", logo: null, f: { ...s.f, note: "" } })
+    };
+  }
+}
+</script>
+</body>
+</html>

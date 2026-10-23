@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Elitesleeve - rukav za gejmere i sportiste</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0B0C0E;color:#F2F2F0;font-family:'Public Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:#FFFFFF}
+a:hover{color:#D9D9D6}
+p{margin:0}
+h1,h2,h3{margin:0}
+@keyframes esDot{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+</style>
+<script src="./es-motion.js"></script>
+</helmet>
+
+<div style="min-height:100vh;">
+
+<header style="position:sticky;top:0;z-index:50;border-bottom:1px solid #26292E;background:#0B0C0E;">
+  <div style="max-width:1320px;margin:0 auto;padding:16px 20px;display:grid;grid-template-columns:{{ hdrCols }};align-items:center;gap:12px 24px;">
+    <a href="index.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:26px;letter-spacing:0.04em;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Elite<span style="color:#C6F432;">sleeve</span></a>
+    <nav style="grid-column:{{ navCol }};grid-row:{{ navRow }};display:{{ navDisplay }};flex-wrap:wrap;align-items:center;justify-content:{{ navJustify }};gap:8px 36px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">
+      <a href="#o-nama" style="color:#B4B7BB;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:0% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">O nama</a>
+      <a href="customize.html" style="color:#B4B7BB;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:0% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">Customize your sleeve</a>
+      <a href="#recenzije" style="color:#B4B7BB;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:0% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">Recenzije</a>
+      <a href="#kontakt" style="color:#B4B7BB;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:0% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">Kontakt</a>
+      <a href="#faq" style="color:#B4B7BB;text-decoration:none;padding:6px 0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 100%;background-size:0% 2px;transition:background-size .4s cubic-bezier(.2,.8,.2,1), color .4s ease;" style-hover="color:#FFFFFF;background-size:100% 2px;">FAQ</a>
+    </nav>
+    <div style="display:flex;align-items:center;justify-content:flex-end;gap:2px;">
+      <a href="{{ instagramUrl }}" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="position:relative;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg></a>
+      <a href="{{ tiktokUrl }}" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="position:relative;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.7"></path></svg></a>
+      <a href="korpa.html" aria-label="Korpa" title="Korpa" style="position:relative;width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2L5 8z"></path><path d="M9 8V6.5a3 3 0 0 1 6 0V8"></path></svg>
+        <sc-if value="{{ hasCart }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute;top:2px;right:0;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:#C6F432;color:#0B0C0E;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;">{{ cartCount }}</span>
+        </sc-if>
+      </a>
+      <button onClick="{{ toggleMenu }}" aria-label="Meni" aria-expanded="{{ menuOpenStr }}" style="display:{{ burgerDisplay }};width:44px;height:44px;margin-left:6px;align-items:center;justify-content:center;flex-direction:column;gap:5px;background:transparent;border:1px solid #33363C;border-radius:6px;cursor:pointer;padding:0;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#FFFFFF;">
+        <span style="display:block;width:18px;height:2px;background:#F2F2F0;transition:transform .35s cubic-bezier(.2,.8,.2,1);transform:{{ bTop }};"></span>
+        <span style="display:block;width:18px;height:2px;background:#F2F2F0;transition:opacity .2s ease;opacity:{{ bMid }};"></span>
+        <span style="display:block;width:18px;height:2px;background:#F2F2F0;transition:transform .35s cubic-bezier(.2,.8,.2,1);transform:{{ bBot }};"></span>
+      </button>
+      <sc-if value="{{ headerCtaVisible }}" hint-placeholder-val="{{ true }}">
+        <a href="#poruci" style="margin-left:10px;font-weight:600;font-size:13px;color:#0B0C0E;background-color:#F2F2F0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 50%;background-size:0% 100%;text-decoration:none;padding:10px 16px;border-radius:6px;white-space:nowrap;text-transform:uppercase;letter-spacing:0.06em;transition:background-size .5s cubic-bezier(.65,0,.35,1), color .3s ease;" style-hover="background-size:100% 100%;color:#0B0C0E;">Poruči za 20 €</a>
+      </sc-if>
+    </div>
+  </div>
+  <div style="display:{{ mobileDisplay }};position:absolute;left:0;right:0;top:100%;grid-template-rows:{{ menuRows }};transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1);background:#0B0C0E;border-bottom:1px solid {{ menuBorder }};pointer-events:{{ menuPE }};">
+    <div style="overflow:hidden;min-height:0;">
+      <nav style="display:flex;flex-direction:column;padding:4px 20px 28px;opacity:{{ menuOpacity }};transform:translateY({{ menuY }});transition:opacity .3s ease, transform .45s cubic-bezier(.2,.8,.2,1);">
+        <a href="#o-nama" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">O nama<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="customize.html" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Customize your sleeve<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="#recenzije" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Recenzije<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="#kontakt" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Kontakt<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="#faq" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #26292E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">FAQ<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8E9297" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        <a href="#poruci" onClick="{{ closeMenu }}" style="margin-top:24px;display:block;text-align:center;background-color:#F2F2F0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 50%;background-size:0% 100%;color:#0B0C0E;text-decoration:none;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:0.08em;padding:18px 24px;border-radius:6px;transition:background-size .5s cubic-bezier(.65,0,.35,1), color .3s ease;" style-hover="background-size:100% 100%;color:#0B0C0E;">Poruči za 20 €</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section data-screen-label="01 Naslov" style="position:relative;min-height:min(92vh,900px);display:flex;align-items:flex-end;border-bottom:1px solid #26292E;background:#0B0C0E;overflow:hidden;">
+  <div style="position:absolute;inset:0;">
+    <img src="img/a.jpg" alt="Fotografija preko cele sekcije: Elitesleeve rukav u akciji, za stolom ili na terenu" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+  <div style="position:absolute;inset:0;background:rgba(11,12,14,0.62);pointer-events:none;"></div>
+  <div style="position:relative;width:100%;max-width:1320px;margin:0 auto;padding:clamp(120px,14vw,200px) 20px clamp(64px,8vw,112px);pointer-events:none;">
+    <div style="max-width:720px;display:flex;flex-direction:column;gap:32px;">
+        <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;">Za gejmere i sportiste</div>
+        <h1 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(52px,6.4vw,96px);line-height:0.92;letter-spacing:-0.005em;max-width:14ch;text-wrap:balance;">Rukav koji drži znoj dalje od stola i lopte</h1>
+        <p style="font-size:clamp(18px,1.5vw,20px);line-height:1.55;max-width:52ch;color:#D2D4D7;text-wrap:pretty;">Znoj ide u tkaninu, a ne na sto ili u šaku. Ruka klizi i drži isto od prvog do poslednjeg minuta.</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;">
+          <a href="customize.html" style="pointer-events:auto;display:inline-block;background-color:#F2F2F0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 50%;background-size:0% 100%;color:#0B0C0E;text-decoration:none;font-weight:600;font-size:17px;padding:18px 30px;border-radius:6px;text-transform:uppercase;letter-spacing:0.08em;transition:background-size .5s cubic-bezier(.65,0,.35,1), color .3s ease;" style-hover="background-size:100% 100%;color:#0B0C0E;">Customize your sleeve</a>
+          <span style="font-size:15px;color:#B4B7BB;">Preko 100 kupaca ga već nosi</span>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section id="o-nama" data-screen-label="04 O nama" style="border-top:1px solid #26292E;border-bottom:1px solid #26292E;padding:clamp(72px,9vw,112px) 20px;">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px);">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(32px,5vw,72px);align-items:start;">
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;">O nama</div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(40px,5vw,64px);line-height:0.92;max-width:14ch;">Tanak sloj tkanine između tebe i poraza</h2>
+        <p style="font-size:17px;line-height:1.65;color:#B4B7BB;max-width:50ch;">Ovde ide priča kako je Elitesleeve nastao: ko ga je pokrenuo, kada i zbog čega. Dve do tri rečenice.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;border-left:1px solid #26292E;padding-left:clamp(0px,3vw,40px);">
+        <p style="font-size:clamp(19px,1.7vw,22px);line-height:1.55;max-width:46ch;text-wrap:pretty;">Navučeš ga do lakta i zaboraviš da ga nosiš. Znoj ostaje u tkanini, ruka klizi preko stola kao po ledu, a na terenu ivica parketa prvo udari rukav, ne kožu.</p>
+        <div style="display:flex;align-items:center;gap:16px;border-top:1px solid #26292E;padding-top:20px;">
+          <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(56px,6vw,80px);line-height:0.85;">100+</span>
+          <span style="font-size:15px;line-height:1.5;color:#B4B7BB;max-width:24ch;">kupaca već igra i trenira u Elitesleeve rukavu</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;">Ljudi koji su podržali našu priču</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:16px;">
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="position:relative;aspect-ratio:1/1;background:#1C1E22;border:1px solid #26292E;border-radius:8px;overflow:hidden;">
+            <img src="img/podrska-1.jpeg" alt="John Brown III" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:22px;line-height:1.1;">John Brown III</span>
+            <span style="font-size:14px;color:#8E9297;">Profesionalni košarkaš</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="position:relative;aspect-ratio:1/1;background:#1C1E22;border:1px solid #26292E;border-radius:8px;overflow:hidden;">
+            <img src="img/podrska-2.jpeg" alt="Džanan Musa" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:22px;line-height:1.1;">Džanan Musa</span>
+            <span style="font-size:14px;color:#8E9297;">Profesionalni košarkaš</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="position:relative;aspect-ratio:1/1;background:#1C1E22;border:1px solid #26292E;border-radius:8px;overflow:hidden;">
+            <img src="img/podrska-3.jpeg" alt="Dunkshop × kamp Nemanje Nedovića" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:2px;">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:22px;line-height:1.1;">Dunkshop × kamp Nemanje Nedovića</span>
+            <span style="font-size:14px;color:#8E9297;">Saradnja</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="05 Benefiti" style="padding:clamp(80px,10vw,136px) 20px;">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:56px;">
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(34px,5vw,64px);line-height:0.95;text-align:center;align-self:center;">Šta se menja kad ga navučeš</h2>
+    <div ref="{{ baRef }}" style="position:relative;width:100%;aspect-ratio:{{ baAspect }};max-height:640px;border:1px solid #26292E;border-radius:8px;overflow:hidden;background:#1C1E22;user-select:none;touch-action:pan-y;">
+      <div style="position:absolute;inset:0;">
+        <img src="img/d.jpg" alt="Fotografija POSLE: ruka u Elitesleeve rukavu" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div style="position:absolute;inset:0;clip-path:inset(0 {{ baClip }} 0 0);background:#141518;">
+        <img src="img/pre.jpg" alt="Fotografija PRE: ruka bez rukava, znoj na stolu" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <span style="position:absolute;top:16px;left:16px;background:#0B0C0E;color:#F2F2F0;border:1px solid #33363C;border-radius:999px;padding:7px 14px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;pointer-events:none;">Pre</span>
+      <span style="position:absolute;top:16px;right:16px;background:#F2F2F0;color:#0B0C0E;border-radius:999px;padding:7px 14px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;pointer-events:none;">Posle</span>
+      <div onPointerDown="{{ baDown }}" role="slider" aria-label="Pomeri za poređenje pre i posle" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ baPos }}" tabindex="0" onKeyDown="{{ baKey }}" style="position:absolute;top:0;bottom:0;left:{{ baLeft }};width:44px;margin-left:-22px;cursor:ew-resize;display:flex;justify-content:center;touch-action:none;">
+        <div style="width:2px;height:100%;background:#C6F432;"></div>
+        <div style="position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:#C6F432;color:#0B0C0E;display:flex;align-items:center;justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"></path></svg>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 48px;">
+      <div style="display:flex;flex-direction:column;">
+        <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;padding-bottom:16px;border-bottom:1px solid #F2F2F0;">Za stolom</div>
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #26292E;font-size:17px;line-height:1.4;font-weight:500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none;"><path d="M3 10.5l4.5 4.5L17 5" stroke="#FFFFFF" stroke-width="1.8"></path></svg><span>Precizan pokret mišem</span></div>
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #26292E;font-size:17px;line-height:1.4;font-weight:500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none;"><path d="M3 10.5l4.5 4.5L17 5" stroke="#FFFFFF" stroke-width="1.8"></path></svg><span>Bez traga od ivice stola</span></div>
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #26292E;font-size:17px;line-height:1.4;font-weight:500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none;"><path d="M3 10.5l4.5 4.5L17 5" stroke="#FFFFFF" stroke-width="1.8"></path></svg><span>Suva ruka do kraja meča</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;">
+        <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;padding-bottom:16px;border-bottom:1px solid #F2F2F0;">Na terenu</div>
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #26292E;font-size:17px;line-height:1.4;font-weight:500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none;"><path d="M3 10.5l4.5 4.5L17 5" stroke="#FFFFFF" stroke-width="1.8"></path></svg><span>Suva šaka, siguran hvat</span></div>
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #26292E;font-size:17px;line-height:1.4;font-weight:500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none;"><path d="M3 10.5l4.5 4.5L17 5" stroke="#FFFFFF" stroke-width="1.8"></path></svg><span>Zaštita od ogrebotina</span></div>
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #26292E;font-size:17px;line-height:1.4;font-weight:500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none;"><path d="M3 10.5l4.5 4.5L17 5" stroke="#FFFFFF" stroke-width="1.8"></path></svg><span>Hrabriji duel</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;">
+        <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;padding-bottom:16px;border-bottom:1px solid #F2F2F0;">Ono na šta ne misliš</div>
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #26292E;font-size:17px;line-height:1.4;font-weight:500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none;"><path d="M3 10.5l4.5 4.5L17 5" stroke="#FFFFFF" stroke-width="1.8"></path></svg><span>Čistija podloga za miša</span></div>
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #26292E;font-size:17px;line-height:1.4;font-weight:500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none;"><path d="M3 10.5l4.5 4.5L17 5" stroke="#FFFFFF" stroke-width="1.8"></path></svg><span>Suv sto</span></div>
+        <div style="display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid #26292E;font-size:17px;line-height:1.4;font-weight:500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex:none;"><path d="M3 10.5l4.5 4.5L17 5" stroke="#FFFFFF" stroke-width="1.8"></path></svg><span>Jedan rukav za igru i trening</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="poruci" data-screen-label="07 Customize" style="padding:clamp(80px,10vw,136px) 20px;">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,88px);align-items:center;">
+    <div style="display:flex;flex-direction:column;gap:28px;">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;">Customize your sleeve</div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(44px,5.5vw,76px);line-height:0.92;max-width:14ch;">Rukav koji je samo tvoj</h2>
+        <p style="font-size:17px;line-height:1.6;color:#B4B7BB;max-width:46ch;">Za dva minuta složiš dizajn i odmah vidiš kako izgleda na rukavu.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;border-bottom:1px solid #26292E;">
+        <div style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #26292E;">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:28px;line-height:1;color:#C6F432;">01</span>
+            <div style="display:flex;flex-direction:column;gap:4px;"><span style="font-size:18px;font-weight:600;">Izaberi boju rukava</span><span style="font-size:15px;line-height:1.5;color:#B4B7BB;">Crna, bela ili siva.</span></div>
+          </div>
+        <div style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #26292E;">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:28px;line-height:1;color:#C6F432;">02</span>
+            <div style="display:flex;flex-direction:column;gap:4px;"><span style="font-size:18px;font-weight:600;">Upiši ime ili broj</span><span style="font-size:15px;line-height:1.5;color:#B4B7BB;">Biraš font, boju i smer teksta.</span></div>
+          </div>
+        <div style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #26292E;">
+            <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:28px;line-height:1;color:#C6F432;">03</span>
+            <div style="display:flex;flex-direction:column;gap:4px;"><span style="font-size:18px;font-weight:600;">Dodaj grb ili logo</span><span style="font-size:15px;line-height:1.5;color:#B4B7BB;">Ubaciš sliku kluba ili tima.</span></div>
+          </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;">
+        <a href="customize.html" style="display:inline-block;background-color:#F2F2F0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 50%;background-size:0% 100%;color:#0B0C0E;text-decoration:none;font-weight:600;font-size:17px;padding:18px 30px;border-radius:6px;text-transform:uppercase;letter-spacing:0.08em;transition:background-size .5s cubic-bezier(.65,0,.35,1), color .3s ease;" style-hover="background-size:100% 100%;color:#0B0C0E;">Customize your sleeve</a>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:36px;line-height:1;">20 €</span>
+      </div>
+    </div>
+    <div style="position:relative;aspect-ratio:4/5;background:#1C1E22;border:1px solid #26292E;border-radius:8px;overflow:hidden;">
+      <img src="img/b.jpg" alt="Fotografija: custom Elitesleeve rukav sa imenom i grbom" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+  </div>
+</section>
+
+<section id="recenzije" data-screen-label="06 Dokazi" style="background:#141518;padding:clamp(80px,10vw,136px) 20px;border-top:1px solid #26292E;border-bottom:1px solid #26292E;overflow:hidden;">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:48px;">
+    <div style="position:relative;width:100%;display:flex;flex-direction:column;align-items:center;gap:8px;">
+      <div style="position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;max-width:380px;">
+        <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;">Recenzije</div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(48px,6vw,80px);line-height:0.92;">Šta kupci pišu</h2>
+        <p style="font-size:17px;line-height:1.6;color:#B4B7BB;">Poruke koje smo dobili od kupaca.</p>
+      </div>
+      {{ bubbles }}
+    </div>
+    <div style="display:flex;justify-content:center;">
+      <a href="customize.html" style="display:inline-block;background-color:#F2F2F0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 50%;background-size:0% 100%;color:#0B0C0E;text-decoration:none;font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:0.08em;padding:18px 30px;border-radius:6px;transition:background-size .5s cubic-bezier(.65,0,.35,1), color .3s ease;" style-hover="background-size:100% 100%;color:#0B0C0E;">Customize your sleeve</a>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" data-screen-label="Kontakt" style="padding:clamp(80px,10vw,136px) 20px;border-top:1px solid #26292E;">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,88px);align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:32px;">
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(44px,5.5vw,72px);line-height:0.92;">Kontakt</h2>
+        <p style="font-size:17px;line-height:1.6;color:#B4B7BB;max-width:44ch;">Pitanje o modelu, custom dizajn ili rukavi za ceo tim. Izaberi kako ti je lakše.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;border-top:1px solid #26292E;">
+        <a href="mailto:{{ email }}" style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid #26292E;color:#F2F2F0;text-decoration:none;" style-hover="color:#FFFFFF;background:#141518;">
+          <span style="width:44px;height:44px;border:1px solid #33363C;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3.5 6l8.5 7 8.5-7"></path></svg></span>
+          <span style="display:flex;flex-direction:column;gap:3px;min-width:0;"><span style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8E9297;">Email</span><span style="font-size:17px;font-weight:500;overflow-wrap:anywhere;">{{ email }}</span></span>
+          <span style="color:#6B6E73;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg></span>
+        </a>
+        <a href="tel:{{ phoneHref }}" style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid #26292E;color:#F2F2F0;text-decoration:none;" style-hover="color:#FFFFFF;background:#141518;">
+          <span style="width:44px;height:44px;border:1px solid #33363C;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg></span>
+          <span style="display:flex;flex-direction:column;gap:3px;min-width:0;"><span style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8E9297;">Telefon</span><span style="font-size:17px;font-weight:500;overflow-wrap:anywhere;">{{ phone }}</span></span>
+          <span style="color:#6B6E73;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg></span>
+        </a>
+        <a href="{{ instagramUrl }}" target="_blank" rel="noopener" style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid #26292E;color:#F2F2F0;text-decoration:none;" style-hover="color:#FFFFFF;background:#141518;">
+          <span style="width:44px;height:44px;border:1px solid #33363C;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg></span>
+          <span style="display:flex;flex-direction:column;gap:3px;min-width:0;"><span style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8E9297;">Instagram</span><span style="font-size:17px;font-weight:500;overflow-wrap:anywhere;">{{ instagramHandle }}</span></span>
+          <span style="color:#6B6E73;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg></span>
+        </a>
+        <a href="{{ tiktokUrl }}" target="_blank" rel="noopener" style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid #26292E;color:#F2F2F0;text-decoration:none;" style-hover="color:#FFFFFF;background:#141518;">
+          <span style="width:44px;height:44px;border:1px solid #33363C;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.7"></path></svg></span>
+          <span style="display:flex;flex-direction:column;gap:3px;min-width:0;"><span style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8E9297;">TikTok</span><span style="font-size:17px;font-weight:500;overflow-wrap:anywhere;">{{ tiktokHandle }}</span></span>
+          <span style="color:#6B6E73;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg></span>
+        </a>
+      </div>
+    </div>
+    <div style="position:relative;background:#F2F2F0;color:#0B0C0E;border-radius:8px;display:flex;flex-direction:column;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 24px;border-bottom:2px solid #0B0C0E;">
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;letter-spacing:0.04em;text-transform:uppercase;">Elitesleeve · Tiket</span>
+        <span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;letter-spacing:0.06em;">#{{ ticketNo }}</span>
+      </div>
+      <sc-if value="{{ contactOpen }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ onContactSubmit }}" style="display:flex;flex-direction:column;">
+          <div style="padding:20px 24px 8px;display:flex;flex-direction:column;gap:10px;">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#55585D;">Tema</span>
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:2px solid #0B0C0E;border-radius:6px;overflow:hidden;">
+              <sc-for list="{{ topics }}" as="t" hint-placeholder-count="4">
+                <button type="button" onClick="{{ t.onClick }}" style="background:{{ t.tbg }};color:{{ t.tfg }};border:none;border-right:1px solid #0B0C0E;border-bottom:1px solid #0B0C0E;padding:14px 12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:0.03em;cursor:pointer;text-align:left;">{{ t.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="padding:8px 24px 20px;display:flex;flex-direction:column;">
+            <label style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);align-items:center;gap:16px;padding:6px 0;border-bottom:1px solid #0B0C0E33;">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8E9297;">Ime</span>
+            <input name="name" value="{{ cf.name }}" onChange="{{ onContactField }}" autocomplete="name" placeholder="Tvoje ime" style="background:transparent;border:none;color:#0B0C0E;font-size:17px;outline:none;padding:14px 0;width:100%;">
+          </label>
+            <label style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);align-items:center;gap:16px;padding:6px 0;border-bottom:1px solid #0B0C0E33;">
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8E9297;">Kontakt</span>
+            <input name="contact" value="{{ cf.contact }}" onChange="{{ onContactField }}" placeholder="Email ili telefon" style="background:transparent;border:none;color:#0B0C0E;font-size:17px;outline:none;padding:14px 0;width:100%;">
+          </label>
+            <label style="display:grid;grid-template-columns:minmax(96px,140px) minmax(0,1fr);align-items:start;gap:16px;padding:6px 0;border-bottom:1px solid #0B0C0E33;">
+            <span style="padding-top:16px;font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#8E9297;">Poruka</span>
+            <textarea name="message" value="{{ cf.message }}" onChange="{{ onContactField }}" rows="3" placeholder="Šta te zanima?" style="background:transparent;border:none;color:#0B0C0E;font-size:17px;outline:none;padding:14px 0;width:100%;resize:vertical;font-family:inherit;line-height:1.5;"></textarea>
+          </label>
+            <sc-if value="{{ contactHasError }}" hint-placeholder-val="{{ false }}">
+              <p style="margin-top:14px;font-size:14px;font-weight:600;">{{ contactError }}</p>
+            </sc-if>
+          </div>
+          <div style="position:relative;border-top:2px dashed #0B0C0E;padding:20px 24px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
+            <span style="position:absolute;top:-13px;left:-13px;width:24px;height:24px;border-radius:50%;background:#0B0C0E;"></span>
+            <span style="position:absolute;top:-13px;right:-13px;width:24px;height:24px;border-radius:50%;background:#0B0C0E;"></span>
+            <span style="font-size:13px;line-height:1.5;color:#55585D;max-width:26ch;">Javljamo ti se na kontakt koji ostaviš.</span>
+            <button type="submit" style="background:#0B0C0E;color:#F2F2F0;border:none;border-radius:6px;padding:16px 26px;font:inherit;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:0.08em;cursor:pointer;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="background:#26292E;color:#FFFFFF;">Pošalji tiket</button>
+          </div>
+        </form>
+      </sc-if>
+      <sc-if value="{{ contactSent }}" hint-placeholder-val="{{ false }}">
+        <div style="position:relative;padding:40px 24px;display:flex;flex-direction:column;gap:16px;min-height:360px;justify-content:center;">
+          <div style="align-self:flex-start;transform:rotate(-6deg);border:3px solid #0B0C0E;border-radius:6px;padding:8px 18px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:44px;line-height:1;letter-spacing:0.06em;text-transform:uppercase;">Primljeno</div>
+          <p style="font-size:17px;line-height:1.6;max-width:40ch;">Hvala, {{ cf.name }}. Tiket #{{ ticketNo }} je kod nas. Javljamo ti se na {{ cf.contact }}.</p>
+          <div style="display:flex;"><button onClick="{{ contactReset }}" style="background:transparent;color:#0B0C0E;border:2px solid #0B0C0E;border-radius:6px;padding:12px 18px;cursor:pointer;font:inherit;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="background:#DEDEDA;color:#0B0C0E;">Novi tiket</button></div>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-screen-label="FAQ" style="padding:clamp(80px,10vw,136px) 20px;border-top:1px solid #26292E;">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,6vw,80px);align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:28px;">
+      <div style="font-size:14px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#C6F432;">FAQ</div>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(40px,5vw,64px);line-height:0.95;">Pitaj nas</h2>
+      <p style="font-size:17px;line-height:1.6;color:#B4B7BB;max-width:42ch;">Klikni na pitanje ili napiši svoje u chat. Asistent odgovara odmah.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <sc-for list="{{ faqChips }}" as="c" hint-placeholder-count="6">
+          <button onClick="{{ c.onClick }}" style="background:transparent;color:{{ c.fg }};border:1px solid {{ c.border }};border-radius:999px;padding:11px 18px;font:inherit;font-size:15px;cursor:pointer;text-align:left;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="background:#1A1C1F;border-color:#C6F432;color:#FFFFFF;">{{ c.q }}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="border:1px solid #26292E;border-radius:8px;background:#141518;display:flex;flex-direction:column;overflow:hidden;">
+      <div style="display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid #26292E;">
+        <div style="width:36px;height:36px;border-radius:50%;background:#F2F2F0;color:#0B0C0E;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;">E</div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <span style="font-weight:600;font-size:15px;">Elitesleeve</span>
+          <span style="font-size:13px;color:#8E9297;">Odgovaramo u porukama</span>
+        </div>
+      </div>
+      <div ref="{{ chatRef }}" style="height:440px;overflow-y:auto;padding:24px 20px;display:flex;flex-direction:column;gap:12px;">
+        <sc-for list="{{ thread }}" as="m" hint-placeholder-count="2">
+          <div style="display:flex;justify-content:{{ m.justify }};">
+            <div style="max-width:80%;background:{{ m.bg }};color:{{ m.fg }};border:1px solid {{ m.border }};border-radius:{{ m.radius }};padding:12px 16px;font-size:16px;line-height:1.5;">{{ m.text }}</div>
+          </div>
+        </sc-for>
+        {{ typingEl }}
+      </div>
+      <form onSubmit="{{ onAiSubmit }}" style="display:flex;align-items:center;gap:8px;padding:12px 12px 12px 20px;border-top:1px solid #26292E;">
+        <input value="{{ aiInput }}" onChange="{{ onAiInput }}" placeholder="Napiši svoje pitanje..." aria-label="Tvoje pitanje" maxlength="300" style="flex:1;min-width:0;background:transparent;border:none;color:#F2F2F0;font-size:16px;outline:none;padding:10px 0;">
+        <button type="submit" aria-label="Pošalji" disabled="{{ aiBusy }}" style="flex:none;height:44px;padding:0 18px;border-radius:22px;background-color:#F2F2F0;background-image:linear-gradient(#C6F432,#C6F432);background-repeat:no-repeat;background-position:50% 50%;background-size:0% 100%;color:#0B0C0E;border:none;font:inherit;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:0.06em;cursor:pointer;display:flex;align-items:center;gap:8px;opacity:{{ aiBtnOpacity }};transition:background-size .5s cubic-bezier(.65,0,.35,1), color .3s ease;" style-hover="background-size:100% 100%;color:#0B0C0E;">Pošalji<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+      </form>
+      <div style="display:flex;align-items:center;gap:12px;padding:0 20px 14px;font-size:13px;color:#6B6E73;">
+        <span style="flex:1;">Odgovara Elitesleeve asistent. Za porudžbine za tim:</span>
+        <a href="{{ instagramUrl }}" target="_blank" rel="noopener" style="color:#B4B7BB;font-weight:600;text-decoration:none;border-bottom:1px solid #44474D;padding-bottom:1px;">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="border-top:1px solid #26292E;background:#0B0C0E;padding:64px 20px 28px;">
+  <div style="max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:48px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:40px 32px;">
+      <div style="display:flex;flex-direction:column;gap:18px;grid-column:{{ footBrandCol }};min-width:0;">
+        <a href="index.html" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:30px;letter-spacing:0.04em;text-transform:uppercase;color:#F2F2F0;text-decoration:none;">Elite<span style="color:#C6F432;">sleeve</span></a>
+        <p style="font-size:15px;line-height:1.6;color:#8E9297;max-width:34ch;">Rukavi za gejmere i sportiste. Gotovi modeli ili custom, sa tvojim imenom i grbom.</p>
+        <div style="display:flex;gap:4px;margin-left:-8px;">
+          <a href="{{ instagramUrl }}" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg></a>
+          <a href="{{ tiktokUrl }}" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#B4B7BB;border-radius:6px;transition:background-color .45s ease, color .45s ease, border-color .45s ease;" style-hover="color:#C6F432;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.7"></path></svg></a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6B6E73;">Shop</span>
+        <a href="customize.html" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">Customize your sleeve</a>
+        <a href="korpa.html" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">Korpa</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6B6E73;">Elitesleeve</span>
+        <a href="#o-nama" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">O nama</a>
+        <a href="#recenzije" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">Recenzije</a>
+        <a href="#faq" style="color:#B4B7BB;text-decoration:none;font-size:15px;" style-hover="color:#FFFFFF;">FAQ</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <span style="font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6B6E73;">Kontakt</span>
+        <span style="font-size:15px;line-height:1.6;color:#B4B7BB;">Pitanja i porudžbine primamo u porukama na Instagramu.</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid #26292E;padding-top:24px;font-size:13px;color:#6B6E73;">
+      <span>© 2026 Elitesleeve</span>
+      <span>Sva prava zadržana</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;info@elitesleeve.com&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Kontakt&quot;},&quot;phone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;+381 6x xxx xxxx&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Kontakt&quot;},&quot;instagramHandle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;@elitesleeve&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Kontakt&quot;},&quot;tiktokHandle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;@elitesleeve&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Kontakt&quot;},&quot;instagramUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://instagram.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Mreže&quot;},&quot;tiktokUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://tiktok.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Mreže&quot;},&quot;showHeaderCta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Zaglavlje&quot;}}">
+const ES_MESSAGES = [
+  { name: "Ime kupca 1", text: "Tekst poruke kupca 1" },
+  { name: "Ime kupca 2", text: "Tekst poruke kupca 2" },
+  { name: "Ime kupca 3", text: "Tekst poruke kupca 3" },
+  { name: "Ime kupca 4", text: "Tekst poruke kupca 4" },
+  { name: "Ime kupca 5", text: "Tekst poruke kupca 5" },
+  { name: "Ime kupca 6", text: "Tekst poruke kupca 6" },
+  { name: "Ime kupca 7", text: "Tekst poruke kupca 7" },
+  { name: "Ime kupca 8", text: "Tekst poruke kupca 8" },
+  { name: "Ime kupca 9", text: "Tekst poruke kupca 9" }
+];
+const ES_FAQ = [
+  { q: "Koliko košta rukav?", a: "20 €. Isto i za custom rukav sa tvojim imenom i grbom." },
+  { q: "Kako da poručim?", a: "Izabereš model u shopu ili napraviš svoj, dodaš ga u korpu i upišeš podatke za dostavu. Javimo ti se na telefon da potvrdimo." },
+  { q: "Koju veličinu da izaberem?", a: "Ovde ide odgovor o veličinama." },
+  { q: "Koliko traje dostava?", a: "Ovde ide rok i cena dostave." },
+  { q: "Kako se plaća?", a: "Ovde ide način plaćanja." },
+  { q: "Od čega je rukav i kako se pere?", a: "Ovde ide materijal i održavanje." }
+];
+const ESCart = {
+  key: "elitesleeve-cart",
+  get() { try { return JSON.parse(localStorage.getItem(this.key)) || []; } catch (e) { return []; } },
+  save(items) { try { localStorage.setItem(this.key, JSON.stringify(items)); } catch (e) {} window.dispatchEvent(new Event("escart")); },
+  add(item) { const items = this.get(); const same = item.type === "model" && items.find((x) => x.type === "model" && x.id === item.id); if (same) same.qty += 1; else items.push({ ...item, uid: Date.now() + "-" + Math.random().toString(36).slice(2, 7), qty: 1 }); this.save(items); },
+  count() { return this.get().reduce((n, x) => n + x.qty, 0); }
+};
+class Component extends DCLogic {
+  state = { narrow: false, hdrNarrow: false, asked: [0], typing: false, msgs: null, aiInput: "", aiBusy: false, cartCount: 0, added: {} };
+  addModel(i, name) {
+    ESCart.add({ type: "model", id: "shop-" + i, slot: "shop-" + i, name, price: 20 });
+    this.setState((s) => ({ added: { ...s.added, [i]: true } }));
+    setTimeout(() => this.setState((s) => ({ added: { ...s.added, [i]: false } })), 1600);
+  }
+  chatRef = React.createRef();
+  baRef = React.createRef();
+  baMove = (ev) => { const r = this.baRef.current && this.baRef.current.getBoundingClientRect(); if (!r) return; const x = Math.max(0, Math.min(100, ((ev.clientX - r.left) / r.width) * 100)); this.setState({ ba: x }); };
+  baUp = () => { window.removeEventListener("pointermove", this.baMove); window.removeEventListener("pointerup", this.baUp); };
+  componentDidUpdate() { const c = this.chatRef.current; if (c) c.scrollTop = c.scrollHeight; }
+  getMsgs(s) { return s.msgs || [{ me: true, text: ES_FAQ[0].q }, { me: false, text: ES_FAQ[0].a }]; }
+  ask(i) {
+    const s = this.state;
+    if (s.typing || s.aiBusy) return;
+    const msgs = [...this.getMsgs(s), { me: true, text: ES_FAQ[i].q }];
+    this.setState({ msgs, asked: [...s.asked.filter((x) => x !== i), i], typing: true });
+    clearTimeout(this.tt);
+    this.tt = setTimeout(() => this.setState((p) => ({ typing: false, msgs: [...this.getMsgs(p), { me: false, text: ES_FAQ[i].a }] })), 900);
+  }
+  async askAi(q) {
+    const s = this.state;
+    const history = this.getMsgs(s);
+    const msgs = [...history, { me: true, text: q }];
+    this.setState({ msgs, aiInput: "", aiBusy: true, typing: true });
+    const facts = ES_FAQ.filter((f) => !/^Ovde ide/.test(f.a)).map((f) => "- " + f.q + " " + f.a).join("\n");
+    const convo = msgs.slice(-8).map((m) => (m.me ? "Kupac: " : "Elitesleeve: ") + m.text).join("\n");
+    const prompt = "Ti si asistent brenda Elitesleeve iz Srbije. Prodajemo rukave za gejmere i sportiste. Kupac može da napravi custom rukav sa imenom, brojem, fontom, bojom rukava (crna, bela, siva) i logom kluba na stranici Customize your sleeve, pa da ga doda u korpu i upiše podatke za dostavu. Pre izrade se javljamo telefonom da potvrdimo dizajn. Preko 100 zadovoljnih kupaca.\nPoznate činjenice:\n" + facts + "\nPravila: odgovaraj na standardnom srpskom jeziku, ekavicom, latinicom, uvek sa svim slovima č, ć, š, ž, đ i dž. Piši gramatički i pravopisno ispravno: pravilni padeži, rod i broj, \"da li\" umesto \"jel\", bez hrvatskih i bosanskih reči, bez anglicizama osim \"custom\". Obraćaj se sa ti. Najviše 2-3 kratke rečenice. Bez uzvičnika, bez emoji. Nikad ne izmišljaj cene dostave, rokove, veličine, materijal, način plaćanja ni garanciju. Ako ne znaš, reci da za to piše na Instagramu i da odgovaramo brzo. Ako pitanje nema veze sa rukavima, ljubazno vrati razgovor na rukave.\n\nRazgovor:\n" + convo + "\nElitesleeve:";
+    let a;
+    try {
+      a = (await window.claude.complete(prompt)).trim().replace(/^Elitesleeve:\s*/, "");
+      const fixed = (await window.claude.complete("Ti si lektor za srpski jezik. Ispravi sve pravopisne, gramatičke i interpunkcijske greške u tekstu ispod. Ekavica, latinica, obavezno č, ć, š, ž, đ. Ne menjaj smisao, ton ni dužinu, ne dodaj ništa. Ukloni uzvičnike i emoji. Vrati samo ispravljen tekst, bez navodnika i objašnjenja.\n\nTekst:\n" + a)).trim();
+      if (fixed && fixed.length < a.length * 1.6) a = fixed.replace(/^["„“]|["“”]$/g, "");
+    }
+    catch (e) { a = "Trenutno ne mogu da odgovorim. Piši nam na Instagramu i javljamo se brzo."; }
+    this.setState((p) => ({ msgs: [...this.getMsgs(p), { me: false, text: a }], aiBusy: false, typing: false }));
+  }
+  componentDidMount() {
+    const esGo = () => { if (window.ESMotion) window.ESMotion.init({ intro: true }); else setTimeout(esGo, 50); }; setTimeout(esGo, 30);
+    this.onResize = () => this.setState({ narrow: window.innerWidth < 768, hdrNarrow: window.innerWidth < 1000 });
+    this.onResize();
+    window.addEventListener("resize", this.onResize);
+    this.onCart = () => this.setState({ cartCount: ESCart.count() }); this.onCart();
+    window.addEventListener("escart", this.onCart); window.addEventListener("storage", this.onCart);
+    this.live = []; this.msgIdx = 0; this.lastSpawn = 0; this.last = performance.now();
+    const loop = (t) => { this.step(t); this.raf = requestAnimationFrame(loop); };
+    this.raf = requestAnimationFrame(loop);
+  }
+  componentWillUnmount() { clearTimeout(this.tt); cancelAnimationFrame(this.raf); window.removeEventListener("resize", this.onResize); }
+  spawn(W) {
+    const m = ES_MESSAGES[this.msgIdx % ES_MESSAGES.length];
+    const light = this.msgIdx % 3 === 1;
+    this.msgIdx++;
+    const el = document.createElement("div");
+    const left = Math.random() < 0.5;
+    el.style.cssText = "position:absolute;left:0;top:0;width:min(280px,74%);will-change:transform,opacity;opacity:0;" +
+      "background:" + (light ? "#F2F2F0" : "#1F2125") + ";color:" + (light ? "#0B0C0E" : "#F2F2F0") + ";border:1px solid " + (light ? "#F2F2F0" : "#33363C") +
+      ";border-radius:" + (left ? "18px 18px 18px 4px" : "18px 18px 4px 18px") + ";padding:14px 18px;display:flex;flex-direction:column;gap:6px;";
+    const n = document.createElement("span");
+    n.textContent = m.name;
+    n.style.cssText = "font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:" + (light ? "#5A5E63" : "#8E9297");
+    const tx = document.createElement("span");
+    tx.textContent = m.text; tx.style.cssText = "font-size:16px;line-height:1.45";
+    el.append(n, tx);
+    this.stage.appendChild(el);
+    const w = el.offsetWidth, hgt = el.offsetHeight;
+    const H = this.stage.clientHeight;
+    const b = { el, w, h: hgt, x: W / 2 - w / 2, y: -hgt * 0.4, age: 0, life: 9 + Math.random() * 5,
+      vx: (Math.random() - 0.5) * 160, vy: 90 + Math.random() * 80, ang: Math.random() * 6.28 };
+    b.vx += (left ? -1 : 1) * 60;
+    this.live.push(b);
+  }
+  step(t) {
+    const dt = Math.min(0.05, (t - this.last) / 1000); this.last = t;
+    const st = this.stage; if (!st) return;
+    const W = st.clientWidth, H = st.clientHeight;
+    const max = this.state.narrow ? 3 : 6;
+    if (this.live.length < max && t - this.lastSpawn > 1400) { this.spawn(W); this.lastSpawn = t; }
+    const L = this.live;
+    for (const b of L) {
+      b.age += dt;
+      b.ang += (Math.random() - 0.5) * 1.6 * dt * 4;
+      if (b.age > 1.4) { b.vx += Math.cos(b.ang) * 70 * dt; b.vy += Math.sin(b.ang) * 70 * dt; }
+      for (const o of L) {
+        if (o === b) continue;
+        const dx = (b.x + b.w / 2) - (o.x + o.w / 2), dy = (b.y + b.h / 2) - (o.y + o.h / 2);
+        const minX = (b.w + o.w) / 2 + 12, minY = (b.h + o.h) / 2 + 12;
+        if (Math.abs(dx) < minX && Math.abs(dy) < minY) {
+          const d = Math.hypot(dx, dy) || 1;
+          b.vx += (dx / d) * 120 * dt; b.vy += (dy / d) * 120 * dt;
+        }
+      }
+      const sp = Math.hypot(b.vx, b.vy), cap = b.age < 1.4 ? 260 : 46;
+      if (sp > cap) { b.vx *= 1 - Math.min(1, 3 * dt); b.vy *= 1 - Math.min(1, 3 * dt); }
+      b.x += b.vx * dt; b.y += b.vy * dt;
+      if (b.x < 0) { b.x = 0; b.vx = Math.abs(b.vx); }
+      if (b.x > W - b.w) { b.x = W - b.w; b.vx = -Math.abs(b.vx); }
+      const top = b.age < 1.4 ? -b.h : 12;
+      if (b.y < top) { b.y = top; b.vy = Math.abs(b.vy); }
+      if (b.y > H - b.h) { b.y = H - b.h; b.vy = -Math.abs(b.vy); }
+      const inT = Math.min(1, b.age / 0.9), outT = Math.max(0, Math.min(1, (b.life - b.age) / 0.8));
+      const op = Math.min(inT, outT), sc = 0.55 + 0.45 * (1 - Math.pow(1 - inT, 3));
+      b.el.style.opacity = op;
+      b.el.style.transform = "translate(" + b.x.toFixed(1) + "px," + b.y.toFixed(1) + "px) scale(" + sc.toFixed(3) + ")";
+    }
+    this.live = L.filter((b) => { if (b.age >= b.life) { b.el.remove(); return false; } return true; });
+  }
+  renderVals() {
+    const s = this.state;
+    const e = React.createElement;
+    if (!this.stageEl) this.stageEl = e("div", { ref: (n) => { this.stage = n; }, style: { position: "relative", width: "100%", height: "clamp(440px, 52vw, 580px)", pointerEvents: "none" } });
+    const bubbles = this.stageEl;
+    const focus = this.props.heroFocus ?? "gaming";
+    const hn = s.hdrNarrow;
+    const products = [
+      { name: "Customize your sleeve", desc: "Tvoje ime, broj i grb kluba. Napraviš dizajn i odmah vidiš kako izgleda.", photo: "Fotografija: custom rukav sa imenom i grbom", cta: "Napravi svoj", btnBg: "#F2F2F0", btnFg: "#0B0C0E" },
+      ...[1, 2].map((n) => ({ name: "Model " + n, desc: "Opis modela " + n + ": boja, dezen i za šta je.", photo: "Fotografija rukava, model " + n, cta: "Poruči", btnBg: "transparent", btnFg: "#F2F2F0" }))
+    ].map((x, i) => ({ ...x, slot: "shop-" + i, isCustom: i === 0, isModel: i > 0, addLabel: s.added[i] ? "Dodato u korpu" : "Dodaj u korpu", onAdd: () => this.addModel(i, x.name) }));
+    const thread = this.getMsgs(s).map((m) => m.me
+      ? { text: m.text, justify: "flex-end", bg: "#F2F2F0", fg: "#0B0C0E", border: "#F2F2F0", radius: "18px 18px 4px 18px" }
+      : { text: m.text, justify: "flex-start", bg: "#1F2125", fg: "#F2F2F0", border: "#33363C", radius: "18px 18px 18px 4px" });
+    const dot = (d) => e("span", { key: d, style: { width: 6, height: 6, borderRadius: "50%", background: "#B4B7BB", animation: "esDot 1s " + d * 0.15 + "s infinite" } });
+    const typingEl = s.typing ? e("div", { style: { display: "flex" } }, e("div", { style: { display: "flex", gap: 5, background: "#1F2125", border: "1px solid #33363C", borderRadius: "18px 18px 18px 4px", padding: "14px 16px" } }, [0, 1, 2].map(dot))) : null;
+    const cf = s.cf || { name: "", contact: "", message: "" };
+    const ba = s.ba ?? 50;
+    return {
+      baRef: this.baRef, baPos: Math.round(ba), baLeft: ba + "%", baClip: (100 - ba) + "%",
+      baDown: (ev) => { ev.preventDefault(); this.baMove(ev); window.addEventListener("pointermove", this.baMove); window.addEventListener("pointerup", this.baUp); },
+      baKey: (ev) => { if (ev.key === "ArrowLeft") this.setState({ ba: Math.max(0, ba - 5) }); if (ev.key === "ArrowRight") this.setState({ ba: Math.min(100, ba + 5) }); },
+      email: this.props.email || "info@elitesleeve.com", phone: this.props.phone || "+381 6x xxx xxxx", phoneHref: (this.props.phone || "").replace(/[^+0-9]/g, ""),
+      instagramHandle: this.props.instagramHandle || "@elitesleeve", tiktokHandle: this.props.tiktokHandle || "@elitesleeve",
+      topics: ["Pitanje o modelu", "Custom dizajn", "Rukavi za tim", "Nešto drugo"].map((label) => { const on = (s.cTopic || "Pitanje o modelu") === label; return { label, tbg: on ? "#0B0C0E" : "transparent", tfg: on ? "#F2F2F0" : "#0B0C0E", onClick: () => this.setState({ cTopic: label }) }; }),
+      sentText: (s.cTopic || "Pitanje o modelu") + ": " + cf.message,
+      ticketNo: ({ "Pitanje o modelu": "MOD", "Custom dizajn": "CUS", "Rukavi za tim": "TIM", "Nešto drugo": "OST" }[s.cTopic || "Pitanje o modelu"] || "ES") + "-" + String(this.ticket || (this.ticket = 1000 + Math.floor(Math.random() * 9000))),
+      cf, contactOpen: !s.cSent, contactSent: !!s.cSent, contactHasError: !!s.cErr, contactError: s.cErr || "",
+      onContactField: (ev) => { const { name, value } = ev.target; this.setState((p) => ({ cf: { ...(p.cf || { name: "", contact: "", message: "" }), [name]: value }, cErr: "" })); },
+      onContactSubmit: (ev) => { ev.preventDefault(); const miss = [["name", "ime"], ["contact", "email ili telefon"], ["message", "poruku"]].filter(([k]) => !cf[k].trim()).map(([, l]) => l); if (miss.length) return this.setState({ cErr: "Upiši još: " + miss.join(", ") + "." }); this.setState({ cSent: true }); },
+      contactReset: () => (this.ticket = 0) || this.setState({ cSent: false, cf: { name: cf.name, contact: cf.contact, message: "" } }),
+      thread, typingEl, chatRef: this.chatRef,
+      aiInput: s.aiInput, aiBusy: s.aiBusy, aiBtnOpacity: s.aiBusy ? 0.5 : 1,
+      onAiInput: (ev) => this.setState({ aiInput: ev.target.value }),
+      onAiSubmit: (ev) => { ev.preventDefault(); const q = s.aiInput.trim(); if (!q || s.aiBusy || s.typing) return; this.askAi(q); },
+      faqChips: ES_FAQ.map((f, i) => { const done = s.asked.includes(i); return { q: f.q, fg: done ? "#8E9297" : "#F2F2F0", border: done ? "#26292E" : "#44474D", onClick: () => this.ask(i) }; }),
+      products,
+      hdrCols: hn ? "1fr auto" : "1fr auto 1fr", navDisplay: hn ? "none" : "flex", burgerDisplay: hn ? "flex" : "none", mobileDisplay: hn ? "grid" : "none",
+      menuRows: s.menuOpen ? "1fr" : "0fr", menuOpacity: s.menuOpen ? 1 : 0, menuY: s.menuOpen ? "0" : "-16px", menuBorder: s.menuOpen ? "#26292E" : "transparent", menuPE: s.menuOpen ? "auto" : "none", menuOpenStr: s.menuOpen ? "true" : "false",
+      bTop: s.menuOpen ? "translateY(7px) rotate(45deg)" : "none", bMid: s.menuOpen ? 0 : 1, bBot: s.menuOpen ? "translateY(-7px) rotate(-45deg)" : "none",
+      toggleMenu: () => this.setState((p) => ({ menuOpen: !p.menuOpen })), closeMenu: () => this.setState({ menuOpen: false }),
+      footBrandCol: hn ? "1 / -1" : "span 2", navCol: hn ? "1 / -1" : "2", navRow: hn ? "2" : "1", navJustify: hn ? "flex-start" : "center",
+      bubbles,
+      cartCount: s.cartCount, hasCart: s.cartCount > 0,
+      instagramUrl: this.props.instagramUrl || "https://instagram.com/",
+      tiktokUrl: this.props.tiktokUrl || "https://tiktok.com/",
+      showHeaderCta: this.props.showHeaderCta ?? true, headerCtaVisible: (this.props.showHeaderCta ?? true) && !hn, baAspect: s.narrow ? "4/5" : "16/9",
+      heroGaming: focus === "gaming",
+      heroSport: focus === "sport"
+    };
+  }
+}
+</script>
+</body>
+</html>
